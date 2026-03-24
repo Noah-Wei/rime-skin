@@ -1,0 +1,83 @@
+patch:
+  # 通知栏显示方式以及 ascii_mode 应用，与外观无关
+  show_notifications_via_notification_center: true
+
+  # 以下软件默认英文模式（你可以继续在这里添加其他 App）
+  app_options:
+    com.github.GitHubClient:
+      ascii_mode: false
+
+# ==================== 外观设置 ====================
+  style:
+    color_scheme: macos_light      # 当前使用的亮色皮肤名称
+    color_scheme_dark: macos_dark  # 当前使用的暗色皮肤名称
+
+  # ==================== 自定义皮肤方案 ====================
+  preset_color_schemes:
+    macos_light:     
+      # ---------- 布局与字体 ----------
+      font_face: "PingFang SC"       # 字体（系统字体最清晰）
+      font_point: 15.6               # 候选词文字大小（搜狗默认约 15-16）
+      label_font_point: 13.0         # 序号（如 1. 2.）的大小
+      candidate_list_layout: linear  # 候选框样式，linear为线型，各候选首尾相连成一串，stacked为各候选均另起一行，呈堆叠状。
+      text_orientation: horizontal   # 文字方向
+      inline_preedit: true           # 编码（拼音）内嵌在输入框里，不在候选栏
+      
+      # ---------- 窗口样式 ----------
+      translucency: true             # 开启半透明磨砂效果（macOS 原生感）
+      corner_radius: 10.0            # 候选栏整体圆角（搜狗风格）
+      hilited_corner_radius: 8.0     # 高亮候选词的圆角
+      border_height: -3.0            # 负值 = 隐藏边框（更干净）
+      border_width: -3.0             # 同上
+      line_spacing: 8.0              # 候选词行间距
+      base_offset: 6.0               # 文字垂直偏移
+      shadow_size: 3.0               # 阴影大小（轻微立体感）
+      color_space: display_p3        # 使用 P3 广色域（颜色更鲜艳）
+      
+      # ---------- 颜色设置 ----------
+      back_color: 0xF0FFFFFF         # 候选栏背景色 
+      candidate_text_color: 0xFF000000   # 普通候选词文字 
+      comment_text_color: 0xFF666666     # 提示词（如词频、英文）
+      label_color: 0xFF888888            # 序号颜色（如 1. 2.）
+      
+      hilited_candidate_back_color: 0xFF007AFF   # 高亮候选词背景 
+      hilited_candidate_text_color: 0xFFFFFFFF   # 高亮候选词文字 
+      hilited_comment_text_color: 0xFFFFFFFF     # 高亮提示词
+      hilited_candidate_label_color: 0xFFFFFFFF  # 高亮序号
+      
+      text_color: 0xFF333333             # 输入框里的拼音/编码颜色
+      hilited_text_color: 0xFFFFFFFF     # 高亮拼音颜色（内嵌模式下）
+
+    macos_dark:                       
+      # ---------- 布局与字体（和亮色保持一致） ----------
+      font_face: "PingFang SC"
+      font_point: 15.6
+      label_font_point: 13.0
+      candidate_list_layout: linear
+      text_orientation: horizontal
+      inline_preedit: true
+      
+      # ---------- 窗口样式（和亮色一致） ----------
+      translucency: true
+      corner_radius: 10.0
+      hilited_corner_radius: 8.0
+      border_height: -3.0
+      border_width: -3.0
+      line_spacing: 8.0
+      base_offset: 6.0
+      shadow_size: 3.0
+      color_space: display_p3
+      
+      # ---------- 颜色设置（暗色舒适版） ----------
+      back_color: 0xF0282828         # 候选栏背景 
+      candidate_text_color: 0xFFFFFFFF   # 普通候选词 
+      comment_text_color: 0xFFBBBBBB     # 提示词 
+      label_color: 0xFFAAAAAA            # 序号 
+      
+      hilited_candidate_back_color: 0xFF007AFF  
+      hilited_candidate_text_color: 0xFFFFFFFF
+      hilited_comment_text_color: 0xFFFFFFFF
+      hilited_candidate_label_color: 0xFFFFFFFF
+      
+      text_color: 0xFFDDDDDD             # 输入框拼音颜色
+      hilited_text_color: 0xFFFFFFFF
